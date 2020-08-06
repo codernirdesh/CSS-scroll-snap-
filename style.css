@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Teko&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+.body-wrapper {
+  display: grid;
+  grid-template-columns: auto 92%;
+  grid-template-areas: "sidebar1 wrap";
+}
+
+.sidebar1 {
+  grid-area: sidebar1;
+  background-color: #000;
+  font-size: 300%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar1 > .menu {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu > li {
+  display: block;
+  padding: 20px 0;
+}
+
+.menu > li > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  padding: 52px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.menu > li > a:hover,
+.menu > li > a > i:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.wrap {
+  display: block;
+  text-align: center;
+  grid-area: wrap;
+  color: #ffffff;
+}
+
+.wrap > section {
+  padding: 50px 25px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  height: 100vh;
+  font-size: 50px;
+  font-family: "Teko", sans-serif;
+}
+
+.header {
+  background-color: #f20732;
+  scroll-snap-align: start;
+}
+
+.nav {
+  background-color: #07038c;
+  scroll-snap-align: start;
+}
+
+.content {
+  background-color: #0439d9;
+  scroll-snap-align: start;
+}
+
+.sidebar {
+  background-color: #056cf2;
+  scroll-snap-align: start;
+}
+
+.footer {
+  background-color: #f20505;
+  scroll-snap-align: start;
+}
